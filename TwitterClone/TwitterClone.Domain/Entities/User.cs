@@ -1,4 +1,4 @@
-﻿namespace TwitterClone.Domain;
+﻿namespace TwitterClone.Domain.Entities;
 
 public class User
 {
@@ -6,6 +6,14 @@ public class User
     private string _firstName;
     private string _lastName;
     private string _email;
+    private DateTime _createdAt;
+    private DateTime _modifiedAt;
+
+    public User()
+    {
+        _id = Guid.NewGuid();
+        _createdAt = DateTime.UtcNow;
+    }
 
     public Guid Id
     {
@@ -29,4 +37,16 @@ public class User
         get { return _email; }
         set { _email = value; }
     }
+
+    public DateTime CreatedAt
+    {
+        get { return _createdAt; }
+    }
+
+    public DateTime ModifiedAt
+    {
+        get { return _modifiedAt; }
+        set { _modifiedAt = value; }
+    }
+
 }
