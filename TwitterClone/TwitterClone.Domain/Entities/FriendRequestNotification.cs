@@ -18,4 +18,9 @@ public sealed class FriendRequestNotification : Notification
     {
         return $"{base.DescribeRecord()}, RequestedByUserId: {RequestedByUserId}";
     }
+
+    public override string GetMessage()
+    {
+        return $"user with Id {RequestedByUserId} set you a friend request";
+    }
 }
