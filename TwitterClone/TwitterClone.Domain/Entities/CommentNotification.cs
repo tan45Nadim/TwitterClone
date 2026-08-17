@@ -18,4 +18,9 @@ public sealed class CommentNotification : Notification
     {
         return $"{base.DescribeRecord()}, CommentByUserId: {CommentByUserId}";
     }
+
+    public override string GetMessage()
+    {
+        return $"user with Id {CommentByUserId} commented on your post";
+    }
 }

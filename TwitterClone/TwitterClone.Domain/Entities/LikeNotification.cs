@@ -19,4 +19,9 @@ public sealed class LikeNotification : Notification
         return $"{base.DescribeRecord()}, LikeByUserId: { LikeByUserId}";
     }
 
+    public override string GetMessage()
+    {
+        return $"User with Id {LikeByUserId} liked your post";
+    }
+
 }
