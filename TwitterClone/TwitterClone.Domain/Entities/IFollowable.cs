@@ -1,6 +1,8 @@
 ﻿
 namespace TwitterClone.Domain.Entities;
 
-internal interface IFollowable
+public interface IFollowable
 {
+    void Follow(Guid userId);
+    void UnFollow(Guid userId);
 }

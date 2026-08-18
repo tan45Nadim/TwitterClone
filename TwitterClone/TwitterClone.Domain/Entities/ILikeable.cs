@@ -1,6 +1,6 @@
 ﻿namespace TwitterClone.Domain.Entities;
 
-internal interface ILikeable
+public interface ILikeable
 {
     bool CanBeLiked();
 }
